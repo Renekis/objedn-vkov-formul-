@@ -1,0 +1,121 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Get your car</title>
+  </head>
+  <body>
+    <h1>Objednávkový formulář</h1>
+
+    <div class="row">
+      <h2><label for="CarBrand">Značka auta</label></h2>
+      <select name="znacky" id="CarBrand">
+        <option value="1500000">Mercedes (1 500 000 Kč)</option>
+        <option value="1200000">Volvo (1 200 000 Kč)</option>
+        <option value="1350000">Audi (1 350 000 Kč)</option>
+        <option value="1400000">BMW (1 400 000 Kč)</option>
+      </select>
+    </div>
+    <br />
+    <div class="row">
+      <label for="RadioPaint"><h2>Lak</h2></label>
+      <label for="Paint-Base">
+        <input
+          type="radio"
+          name="RadioPaint"
+          id="Paint-Basic"
+          checked
+        />Základní barva (bez příplatku) </label
+      ><br />
+      <label for="Paint-Laquered">
+        <input type="radio" name="RadioPaint" id="Paint-Laquered" />Pálený lak
+        (příplatek 5 % základní ceny) </label
+      ><br />
+      <label for="Paint-Metalic">
+        <input type="radio" name="RadioPaint" id="Paint-Metalic" />Metalická
+        barva (příplatek 7% základní ceny)
+      </label>
+    </div>
+    <br />
+    <div class="row">
+      <legend><h2>Dodatečná výbava</h2></legend>
+      <label for="switch-1" class="switch">
+        <input
+          type="checkbox"
+          name="Switch 1"
+          id="switch-1"
+          role="switch"
+          value="10000"
+        />Parkovací kamery (+10 000 Kč)
+      </label>
+      <br />
+      <label for="switch-2" class="switch">
+        <input
+          type="checkbox"
+          name="Switch 2"
+          id="switch-2"
+          role="switch"
+          value="20000"
+        />
+        Litá kola (+20 000 Kč)
+      </label>
+      <br />
+      <label for="switch-3" class="switch">
+        <input
+          type="checkbox"
+          name="Switch 3"
+          id="switch-3"
+          role="switch"
+          value="50000"
+        />
+        Kožené sedačky (+50 000 Kč)
+      </label>
+      <br />
+      <label for="switch-4" class="switch">
+        <input
+          type="checkbox"
+          name="Switch 4"
+          id="switch-4"
+          role="switch"
+          value="1.2"
+        />
+        Tuningová úprava (+20% ceny)
+      </label>
+    </div>
+    <br />
+    <div class="row">
+      <button type="button" onclick="calcPrice()">Vypočti cenu</button><br />
+      <input
+        type="text"
+        name="text"
+        id="FinalPrice"
+        placeholder="Celková cena"
+      />
+      <br />
+      <label for="BuyerPriceCeiling"></label>
+      <input
+        type="text"
+        name="text"
+        id="BuyerPriceCeiling"
+        placeholder="Rozpočet"
+        onkeypress="isAffordable()"
+      />
+      <br />
+      <input type="text" name="text" id="BuyersOption" placeholder="Výsledek" />
+    </div>
+    <br />
+    <div class="row">
+      <label for="EmailInput">Zašlete nám prosím e-mail</label><br />
+      <input
+        type="text"
+        name="text"
+        id="EmailInput"
+        placeholder="jméno@email.cz"
+      />
+      <button onclick="emailValid()">Odeslat</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
